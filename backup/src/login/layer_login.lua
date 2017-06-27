@@ -25,7 +25,9 @@ end
 function layer_login:init_view()
     log:i(log.T_DEFAULT, self.m_name..":init_view")
     
-    self.m_ui_root = base_func.load_ui("csd.ui_login.lua", "csd/ui_login.csb")
+    
+
+    self.m_ui_root = base_func.load_ui("csd.login.ui_login.lua", "csd.login.ui_login.csb")
     self:addChild(self.m_ui_root)
 
     --登录按钮

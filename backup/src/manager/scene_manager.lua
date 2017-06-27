@@ -30,12 +30,12 @@ function scene_manager:switch_scene(t)
     if DEBUG > 0 then
     --添加 重启脚本按钮
         local btn_reload = ccui.Button:create()
-        local w,h = 100, 100
+        local w,h = 72, 72
         btn_reload:setTouchEnabled(true)
         btn_reload:setPressedActionEnabled(true)
         btn_reload:loadTextures("common/shutdown.png", "common/shutdown.png", "")
         btn_reload:setTitleText("")
-        btn_reload:setPosition(cc.p(display.width - w, display.height - h))
+        btn_reload:setPosition(cc.p(display.width/2, display.height - h/2))
         btn_reload:addTouchEventListener(function(sender, eventType)
             if eventType == ccui.TouchEventType.ended then
                 base_func.reload_script()

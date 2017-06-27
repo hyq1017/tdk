@@ -25,14 +25,13 @@ end
 function layer_hall:init_view()
     log:i(log.T_DEFAULT, self.m_name..":init_view")
 
-    self.m_ui_root = base_func.load_ui("csd.ui_hall.lua", "csd/ui_hall.csb")
+    self.m_ui_root = base_func.load_ui("csd.hall.ui_hall.lua", "csd.hall.ui_hall.csb")
     self:addChild(self.m_ui_root)
-    self.m_ui_root:setScale(0.75)
 
-     --登录按钮
-     local btn_create = self.m_ui_root:getChildByName("btn_create_room")
-     btn_create:setPressedActionEnabled(true)
-     btn_create:addTouchEventListener(handler(self,self.event_create_room))
+--     --登录按钮
+--     local btn_create = self.m_ui_root:getChildByName("btn_create_room")
+--     btn_create:setPressedActionEnabled(true)
+--     btn_create:addTouchEventListener(handler(self,self.event_create_room))
 end
 
 --按钮事件 登录
